@@ -73,7 +73,7 @@ def home():
 
                 task = request.form["task"]
                 
-                # only add the content to the database if 
+                # only add the content to the database if the task is valid
                 if is_task_content_valid(task) == True:
                     db.engine.execute(f"INSERT INTO tasks(user_id, content) VALUES('{session['user_id']}', '{task}')")
                     session["task_list"] = retrieve_tasks()  #refresh after inserting the value
