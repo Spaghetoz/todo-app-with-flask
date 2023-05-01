@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="todo-container" class="centered-container">
+    <h3 id="todo-container-title">Tasks</h3>
+
+    <hr>
+
+    <form method="post">
+        <span class="input-box">
+            <input type="text" id="todo-input", placeholder="Add a new task", maxlength="50" name="task">
+            <input type="submit" class="input-submit" value="Submit" name="task_submit_btn">
+        </span>   
+    </form>
+
+        <ul id="tasks">
+            {% for task in task_list %}
+            <li class="task">
+                <p>{{task[0]}}</p>
+
+                <a href="{{url_for('edit_task', task_id=task[1])}}"> <button class="green-btn">  <i class="material-icons">edit_note</i>  </button> </a>
+                <a href="{{url_for('delete_task', task_id=task[1])}}"><button class="red-btn">  <i class="material-icons">delete</i>  </button></a>
+                
+            </li>
+            {% endfor %}
+        </ul>
+</div>
+{% endblock %} 

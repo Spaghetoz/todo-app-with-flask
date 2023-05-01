@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="centered-container">
+    <h3>Welcome ! Please sign up or sign in</h3>
+    <hr>
+    <a href="{{url_for('login')}}"><button id="signin-btn">Sign in</button></a>
+    <a href="{{url_for('register')}}"><button id="signup-btn">Sign up</button></a>
+</div>
+{% endblock %}

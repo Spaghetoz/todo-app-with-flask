@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Todo app</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/styles.css')}}">
+    
+    <!-- <link href='https://unpkg.com/css.gg@2.0.0/icons/css/home-screen.css' rel='stylesheet'> -->
+    <!--<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+<body>
+    <header>
+        <nav id="nav-title">
+            <ul>
+                <li><h1> <a href="{{url_for('home')}}"> Todo App </a> </h1></li>
+                <li><a href="{{url_for('login')}}">Sign in</a></li>
+                <li><a href="{{url_for('register')}}">Sign up</a></li>
+
+                {% if is_session_active %}
+                <button class="red-btn"> <a href="{{url_for('logout')}}"> <i class="material-icons">logout</i> </a> </button>
+                {% endif %}
+                
+            </ul>
+            {% with messages = get_flashed_messages(with_categories=True) %}
+                {% if messages %}
+                    {% for category, message in messages %} 
+                        <p class="flash-{{category}} flash">{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </nav>
+    </header>
+    <main>
+
+        {% block content %}{% endblock %} 
+        
+    </main>
+    <footer></footer>
+
+</body>
+
+</html>

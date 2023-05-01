@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="register-container" class="centered-container"> 
+    <h3>Register</h3>
+    <hr>
+    <form method="post">
+        <span class="input-box" id="register-inputs">
+            <input type="text" placeholder="Enter the username" maxlength="30" name="username-register">
+            <input type="password" placeholder="Enter the password" maxlength="30" name="password-register">
+            <input type="text" placeholder="Enter the email, example : johnson@gmail.com" maxlength="254" name="email-register">
+            <input type="submit" class="input-submit" value="Submit">
+        </span>   
+    </form>
+</div>
+{% endblock%}

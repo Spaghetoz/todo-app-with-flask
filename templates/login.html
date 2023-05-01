@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="login-container" class="centered-container"> 
+    <h3>Login</h3>
+    <hr>
+    <form method="post">
+        <span class="input-box" id="register-inputs">
+            <input type="text" placeholder="Enter your username", maxlength="30" name="username-login">
+            <input type="password" placeholder="Enter your password" maxlength="30" name="password-login">
+            <p id="forgot-password-text"><a href="{{url_for('forgot_password')}}">Forgot password ?</a></p>
+            <input type="submit" class="input-submit" value="Submit">
+        </span>   
+    </form>
+</div>
+{% endblock%}

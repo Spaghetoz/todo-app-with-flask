@@ -1,0 +1,243 @@
+* {
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;    /* remove blue outline around buttons, text input */
+    color: black;
+    
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0px 1px 8px #ddd;
+    
+}
+nav {
+    width: 100%;
+}
+
+
+nav li {
+    display: inline-block;
+    padding: 20px;
+}
+
+#nav-title {
+    margin-right: auto;
+}
+
+/* TODO fix flash exceed borders */
+.flash {
+    border-style:solid;
+    border-width: 1px;
+    border-radius: 2px;
+    padding:10px 10px 10px 20px;
+    
+}
+
+.flash-error {
+    color:#875c5d;
+    background-color: #f7d8d8;
+    border-color: #eed1d3;
+}
+.flash-success {
+    color:#6b8c71;
+    background-color: #d2edd6;
+    border-color: #e1f2e4;
+}
+.flash-warning {
+    color: #b2ab6b;
+    background-color: #fdf3c7;
+    border-color: #fcf1ca;
+}
+
+.flash-info {
+    color: #6686a6;
+    background-color: #cae3fc;
+    border-color: #cadff4;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#todo-container, .centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /*background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23d0d0d0' fill-opacity='0.41'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");*/
+    width: 50%;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c8c8cc;
+    border-radius: 5px;
+
+    margin-top: 3%;
+
+    /*background-color: #f7f7f7;*/
+    
+}
+
+h3 {
+    margin-right: auto;
+    padding:20px;
+}
+hr {
+    width: 100%;
+    border:none;
+    height:1px;
+    background:#c8c8cc;
+}
+
+form {
+    width:100%;
+}
+
+.input-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    /* top right bottom left */
+    margin: 30px 0 10px 0;
+}
+
+.input-box input[type="text"], input[type="password"] {
+    margin-right: 5px;
+
+    width: 50%;
+
+    border-color: #c8c8cc;
+    border-radius: 4px;
+}
+.input-box * {
+    padding:7px;
+    font-size: 15px;
+
+    border-style: solid;
+    border-width: 1px;
+}
+ 
+.input-submit {
+    border-style:none;  /* remove button weird old border style */
+    width: 75px;
+    padding: 9px;
+    background-color: #2f7cff;
+    color:white;
+    cursor: pointer;
+
+    border-radius: 4px;
+    
+}
+.input-submit:hover { background-color: #256be4; }
+.input-submit:active { background-color: #1958c4;}
+
+#tasks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+
+    margin-bottom: 30px;
+}
+
+/* TODO resolve responsive */
+.task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    
+    margin: 15px 7px 0 7px;
+    
+}
+.task p {
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c8c8cc;
+
+    margin-right: 7px;
+    padding: 11px;
+
+    width: 58.4%;
+}
+button {
+    padding: 6px 10px 6px 10px;
+    margin-right: 7px;
+    border-style:solid;
+    border-width: 1px;
+    border-color: transparent;
+    border-radius: 4px;
+}
+
+.green-btn { background-color: rgb(27, 150, 53); cursor: pointer;}
+.green-btn:hover {  background-color: rgb(22, 126, 44);}
+.green-btn:active {  background-color: rgb(25, 109, 43);}
+
+.red-btn { background-color: rgb(201, 19, 19); cursor: pointer; }
+.red-btn:hover { background-color: rgb(167, 15, 15); }
+.red-btn:active { background-color: rgb(141, 14, 14); }
+
+i { 
+    color: white; 
+}
+
+footer {
+    height: 100px;
+}
+
+/*------------- Register--------------- */
+#register-inputs {
+    flex-direction: column;
+    
+}
+#register-inputs * {
+    margin: 5px;
+}
+
+#forgot-password-text, #forgot-password-text a {
+    margin-right: 40%;
+    border: none;
+    padding: 0;
+    color: rgb(43, 92, 182);
+}
+
+
+/*---------Sign up or login page----------------*/
+#signin-btn, #signup-btn {
+    font-size: 14px;
+    background-color: #2f7cff;
+    margin:7px;
+    padding: 15px 80px 15px 80px;
+    
+}
+#signin-btn:hover, #signup-btn:hover { cursor: pointer; }
+
+#signin-btn {
+    margin-top: 20px;
+    border-style: solid;
+    border-color: #2f7cff;
+    background-color: transparent;
+}
+
+#signin-btn {
+    color: #2f7cff;
+}
+
+#signup-btn{
+    color:white;
+}
