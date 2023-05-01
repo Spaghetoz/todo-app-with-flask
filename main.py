@@ -12,7 +12,7 @@ db.init_app(app)
 
 # session configuration
 app.permanent_session_lifetime = timedelta(days=2)
-app.secret_key = "verysafepassword"
+app.secret_key = "secretkey"
 
 class Users(db.Model):
     id = db.Column(db.Integer, primary_key=True)
