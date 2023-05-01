@@ -14,6 +14,7 @@ db.init_app(app)
 app.permanent_session_lifetime = timedelta(days=2)
 app.secret_key = "secretkey"
 
+# database models
 class Users(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(30), unique=True)
