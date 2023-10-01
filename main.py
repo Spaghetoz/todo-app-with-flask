@@ -2,6 +2,7 @@ from flask import *
 from flask_sqlalchemy import SQLAlchemy
 from datetime import timedelta
 
+
 db = SQLAlchemy()
 
 app = Flask(__name__, template_folder="templates")
