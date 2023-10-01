@@ -7,3 +7,6 @@ To install the dependencies enter these commands in the command prompt:
 pip install flask
 pip install Flask-SQLAlchemy
 ```
+Warning, this app currently doesn't works with SQLAlchemy 2.0 or above, so you need to install it with the following command : 
+
+`pip install SQLAlchemy==1.4.17`

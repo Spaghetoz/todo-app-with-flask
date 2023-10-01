@@ -2,7 +2,6 @@ from flask import *
 from flask_sqlalchemy import SQLAlchemy
 from datetime import timedelta
 
-
 db = SQLAlchemy()
 
 app = Flask(__name__, template_folder="templates")
@@ -210,10 +209,10 @@ def register():
         email = request.form.get("email-register")
 
         if is_username_valid(username) and is_password_valid(password) and is_email_valid(email):
-
+            
             user_exists = db.engine.execute(f"SELECT EXISTS(SELECT * FROM users WHERE username = '{username}')").one()[0];   # one() is to get the only resulting row and [0] because the row is returned as a tuple
             email_exists = db.engine.execute(f"SELECT EXISTS(SELECT * FROM users WHERE email = '{email}')").one()[0];
-
+            
             # register the user if he doesn't already exists
             if user_exists == False and email_exists == False:
                 db.engine.execute(f"INSERT INTO users(username, password, email) VALUES('{username}', '{password}', '{email}')")
