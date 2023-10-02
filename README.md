@@ -1,6 +1,5 @@
 # TODO App with Flask
-A very simple todo app made with Flask in Python. \
-You can login, register, save tasks and delete them. \
+A very simple todo app made with Flask in Python where you can login, register, save tasks and delete them. \
 It works with a basic sqlite database.
 
 To install the dependencies enter these commands in the command prompt:
