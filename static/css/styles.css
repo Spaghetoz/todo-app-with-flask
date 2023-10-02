@@ -131,15 +131,15 @@ form {
     border-style:none;  /* remove button weird old border style */
     width: 75px;
     padding: 9px;
-    background-color: #2f7cff;
+    background-color: #7c2ade;
     color:white;
     cursor: pointer;
 
     border-radius: 4px;
     
 }
-.input-submit:hover { background-color: #256be4; }
-.input-submit:active { background-color: #1958c4;}
+.input-submit:hover { background-color: #6f2dc0; }
+.input-submit:active { background-color: #5a2699;}
 
 #tasks {
     display: flex;
@@ -187,9 +187,19 @@ button {
 .green-btn:hover {  background-color: rgb(22, 126, 44);}
 .green-btn:active {  background-color: rgb(25, 109, 43);}
 
-.red-btn { background-color: rgb(201, 19, 19); cursor: pointer; }
+.red-btn { 
+    background-color: rgb(201, 19, 19);
+    cursor: pointer;
+    float:right;
+
+ }
 .red-btn:hover { background-color: rgb(167, 15, 15); }
 .red-btn:active { background-color: rgb(141, 14, 14); }
+
+#logout-btn {
+    margin-top: 14px;
+    margin-right: 14px;
+}
 
 i { 
     color: white; 
@@ -219,9 +229,10 @@ footer {
 /*---------Sign up or login page----------------*/
 #signin-btn, #signup-btn {
     font-size: 14px;
-    background-color: #2f7cff;
+    background-color: #7c2ade;
     margin:7px;
-    padding: 15px 80px 15px 80px;
+    padding: 15px 50px 15px 50px;
+    border-radius: 7px;
     
 }
 #signin-btn:hover, #signup-btn:hover { cursor: pointer; }
@@ -229,14 +240,18 @@ footer {
 #signin-btn {
     margin-top: 20px;
     border-style: solid;
-    border-color: #2f7cff;
+    border-color: #7c2ade;
+    
     background-color: transparent;
 }
 
 #signin-btn {
-    color: #2f7cff;
+    color: #7c2ade;
+    font-weight: bold;
+    
 }
 
 #signup-btn{
     color:white;
+    font-weight: bold;
 }

@@ -270,7 +270,7 @@ def login():
 
                     ## retrieve the tasks from the database
                     session["task_list"] = retrieve_tasks()
-
+ 
                     flash("Successfully logged in", "success")
                     return redirect(url_for("home"))
 

@@ -22,7 +22,7 @@
                 <li><a href="{{url_for('register')}}">Sign up</a></li>
 
                 {% if is_session_active %}
-                <button class="red-btn"> <a href="{{url_for('logout')}}"> <i class="material-icons">logout</i> </a> </button>
+                <button class="red-btn", id="logout-btn"> <a href="{{url_for('logout')}}"> <i class="material-icons">logout</i> </a> </button>
                 {% endif %}
                 
             </ul>
