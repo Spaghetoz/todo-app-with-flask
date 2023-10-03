@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="centered-container">
+    <h3>Edit task</h3>
+    <hr>
+    <form method="post">
+        <span class="input-box">
+            <input type="text" class="todo-input", value="{{content}}" ,placeholder="Edit your task", maxlength="50" name="task-content">
+            <input type="submit" class="input-submit" value="Edit" name="task_edit_submit_btn">
+        </span>
+    </form>
+
+
+</div>
+
+{% endblock %}

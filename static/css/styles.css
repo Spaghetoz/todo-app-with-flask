@@ -73,7 +73,7 @@ main {
     align-items: center;
     flex-direction: column;
 
-    width: 50%;
+    width: 60rem;
 
     border-style: solid;
     border-width: 1px;
@@ -114,7 +114,7 @@ form {
 .input-box input[type="text"], input[type="password"] {
     margin-right: 5px;
 
-    width: 50%;
+    width: 30rem;
 
     border-color: #c8c8cc;
     border-radius: 4px;
@@ -129,7 +129,7 @@ form {
  
 .input-submit {
     border-style:none;  /* remove button weird old border style */
-    width: 75px;
+    width: 5rem;
     padding: 9px;
     background-color: #7c2ade;
     color:white;
@@ -187,10 +187,14 @@ button {
 .green-btn:hover {  background-color: rgb(22, 126, 44);}
 .green-btn:active {  background-color: rgb(25, 109, 43);}
 
+.blue-btn { background-color: #3859eb; cursor: pointer;}
+.blue-btn:hover {  background-color: #304dc9;}
+.blue-btn:active {  background-color: #2840a8;}
+
 .red-btn { 
     background-color: rgb(201, 19, 19);
     cursor: pointer;
-    float:right;
+    
 
  }
 .red-btn:hover { background-color: rgb(167, 15, 15); }
@@ -199,6 +203,7 @@ button {
 #logout-btn {
     margin-top: 14px;
     margin-right: 14px;
+    float:right;
 }
 
 i { 

@@ -294,9 +294,24 @@ def logout():
         flash("Successfully logged out", "success")
         return redirect(url_for("not_logged_in"))
 
-@app.route("/functions/edit-task-id=<task_id>")
+@app.route("/edit-task<task_id>", methods=["GET","POST"])
 def edit_task(task_id):
-    flash("Can't edit a task right now", "info")
+
+
+    if is_session_active():
+        # before let the user change the task, check it task belongs well to him
+        if session["user_id"] == db.engine.execute(f"SELECT user_id FROM tasks WHERE id={task_id}").one()[0]:
+
+            if request.method == "POST":
+                if "task_edit_submit_btn" in request.form:
+                    task_content = request.form.get("task-content")
+                    db.engine.execute(f"UPDATE tasks SET content='{task_content}' WHERE id={task_id}")
+                    return redirect(url_for("home"))
+
+            task_content = db.engine.execute(f"SELECT content FROM tasks WHERE id={task_id}").one()[0]
+            return render_template("edit-task.html",content=task_content ,is_session_active=is_session_active())
+        
+    flash("Can't edit this task", "error")
     return redirect(url_for("home"))
 
 
